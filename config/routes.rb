@@ -4,5 +4,8 @@ Rails.application.routes.draw do
     namespace 'v1' do
       resources :products, only: [:index]
     end
+    namespace 'v2' do 
+      resources :products, only: [:create]
+    end
   end
 end

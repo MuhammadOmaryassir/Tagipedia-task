@@ -1,15 +1,12 @@
 module Api
-  module V1
+  module V2
     class ProductsController < ApplicationController
-      def index
-
-        # Store all query strings 
-        url = request.query_parameters
-        name = url['name']
-
+      def create
+        product_name = product_params['name']
+        
         # search product by it's name 
-        product =  Product.where(product_name: name)
-
+        product = Product.find_by_sql("SELECT * From products WHERE product_name ='#{product_name}'")
+       
         # if the item found
         if product[0] != nil 
           render json: {status: 'SUCCESS', message:'Product Found', data:product},status: :ok
@@ -17,6 +14,13 @@ module Api
           # if the item not found
           render json: {status: 'FAILED', message:'Product Not Found'},status: :not_found
         end
+      end
+
+
+      private
+      # get the Prdiuct name from the Payload
+      def product_params
+        params.permit(:name)
       end
     end
   end
