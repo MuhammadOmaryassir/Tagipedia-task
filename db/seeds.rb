@@ -5,4 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
- Product.create({product_name: 'IphoneX'})
+ Product.create([{product_name: 'IphoneX'},{product_name: 'IphoneXs'},{product_name: 'IphoneXr'}])
