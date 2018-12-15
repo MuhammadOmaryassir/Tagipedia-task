@@ -56,7 +56,7 @@ $ bundle exec rspec spec/requests/search.rb
 ```
 
 
-## This is Search API 
+## This is a Search API that's search for Product 
 
 ### Features
 - containerized applications
