@@ -1,7 +1,7 @@
 # README
 
 This is a Task for Tagipedia Stage 1, link : https://www.tagipedia.com
-application up and running.
+## This is a Search API that's search for a Product 
 * Ruby version : 2.5.3
 
 * System dependencies  - Note : You can use Docker only
@@ -55,8 +55,6 @@ $ rake db:seed
 $ bundle exec rspec spec/requests/search.rb
 ```
 
-
-## This is a Search API that's search for a Product 
 
 ### Features
 - containerized applications
