@@ -54,6 +54,7 @@ $ rake db:seed
 ```bash
 $ bundle exec rspec spec/requests/search.rb
 ```
+* This is Search API 
 
 ### Features
 - containerized applications
